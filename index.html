@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css"/>
+
+  <title>Document</title>
+</head>
+<body>
+  <table id="example" class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Имя клиента</th>
+        <th scope="col">Идентификатор плательщика</th>
+        <th scope="col">МФО банка плательщика</th>
+        <th scope="col">Наименование банка плательщика</th>
+        <th scope="col">Номер счёта банка плательщика</th>
+        <th scope="col">МФО банка получателя</th>
+        <th scope="col">Номер счёта банка плательщика</th>
+        <th scope="col">Номер платёжного документа</th>
+        <th scope="col">Дата платёжного документа</th>
+        <th scope="col">Дата и время операции</th>
+        <th scope="col">Описание платежа</th>
+        <th scope="col">Сумма платежа</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+  <script src="index.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+  $('.table').DataTable({
+    'ordering': true,
+    'searching': false,
+    'paging': false,
+    'columnDefs': [
+      {
+        'targets': 0,
+        'seachable': false,
+        'visible': true
+      }
+    ],
+    'order': [[2, 'desc']]
+
+  });
+});
+
+</script>
+</body>
+</html>
