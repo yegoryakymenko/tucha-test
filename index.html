@@ -37,24 +37,6 @@
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function() {
-  $('.table').DataTable({
-    'ordering': true,
-    'searching': false,
-    'paging': false,
-    'columnDefs': [
-      {
-        'targets': 0,
-        'seachable': false,
-        'visible': true
-      }
-    ],
-    'order': [[2, 'desc']]
-
-  });
-});
-
-</script>
+<script src="table.js"></script>
 </body>
 </html>
